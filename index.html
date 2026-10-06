@@ -63,11 +63,10 @@ nav a:hover::after{right:0}
 .hero{position:relative;overflow:hidden;padding-top:calc(116px + env(safe-area-inset-top,0px));background:radial-gradient(120% 80% at 70% 100%, #1F3A66 0%, var(--navy) 60%)}
 #sky{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:center;padding-bottom:160px}
-.hero h1{font-size:clamp(42px,6vw,80px);font-weight:800;color:#fff}
-.rot{display:grid;overflow:hidden;color:var(--gold);padding-bottom:.06em}
-.rot span{grid-area:1/1;transform:translateY(110%);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
-.rot span.on{transform:translateY(0)}
-.rot span.out{transform:translateY(-110%)}
+.hero h1{font-size:clamp(34px,4.4vw,58px);font-weight:800;color:#fff;line-height:1.08}
+.hero h1 .ln{display:block}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#D4AF5A 0%,#F3DC9B 45%,#D4AF5A 60%,#D4AF5A 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gleam 6s ease-in-out infinite}
+@keyframes gleam{0%,60%{background-position:100% 0}100%{background-position:-150% 0}}
 .hero .copy{display:flex;flex-direction:column;gap:24px}
 .hero .lede{font-size:20px}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
@@ -236,10 +235,8 @@ footer b{color:#fff}
     <div class="wrap">
       <div class="copy">
         <div class="eyebrow">California business brokerage · Commercial real estate · Commercial loans</div>
-        <h1>One advisor for the whole deal.
-          <span class="rot"><span class="on">Sell the business.</span><span>Buy the next one.</span><span>Finance the building.</span></span>
-        </h1>
-        <p class="lede">I help owners sell confidentially, help buyers find and finance the right company, and handle the commercial property and loan that often come with it.</p>
+        <h1><span class="ln">Sell the business.</span> <span class="ln">Buy the next one.</span> <em class="ln">Finance the building.</em></h1>
+        <p class="lede">One advisor for the whole deal. I help owners sell their businesses confidentially, help buyers find and finance the right one, and handle the commercial property and loan that often come with it.</p>
         <div class="ctas">
           <a class="btn primary" href="#contact">Request a confidential valuation <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           <a class="btn line" href="#join">Brokers: join my team</a>
@@ -276,7 +273,7 @@ footer b{color:#fff}
     <div class="wrap">
       <div class="head">
         <div class="eyebrow">What I do</div>
-        <h2 id="svc-h">Three services. One transaction.</h2>
+        <h2 id="svc-h">Three services, one transaction</h2>
         <p class="lede">A business sale often includes a building to buy or a lease to assign, and a buyer who needs a loan. Keeping all three with one advisor keeps the deal moving.</p>
       </div>
       <div class="services">
@@ -294,7 +291,7 @@ footer b{color:#fff}
           <div class="body">
             <h3>Buying, selling and leasing property</h3>
             <p>For owner-users, investors and businesses that need space.</p>
-            <ul><li>Office, retail, industrial and mixed-use</li><li>Owner-user purchases alongside a business sale</li><li>Investment property and 1031 exchange coordination</li><li>Lease review and assignment on a business sale</li></ul>
+            <ul><li>Office, retail, industrial and mixed-use</li><li>Owner-user purchases alongside a business sale</li><li>Investment property and 1031 exchange coordination</li><li>Lease review and lease assignment on a business sale</li></ul>
             <a class="more" href="#contact">Talk about a property →</a>
           </div>
         </article>
@@ -323,15 +320,15 @@ footer b{color:#fff}
       <div class="head">
         <div class="eyebrow">Selling a business</div>
         <h2 id="proc-h">How a confidential sale works</h2>
-        <p class="lede">Every sale moves through the same six stages. You'll always know where you are and what I need from you.</p>
+        <p class="lede">Every sale follows the same six stages. You'll know what's happening at each one and what I need from you.</p>
       </div>
       <ol class="steps" id="steps">
-        <li><span class="dot">1</span><h3>Valuation</h3><p>Three years of financials, recast to show true owner earnings and a price the market will support.</p><span class="docs">Tax returns · P&amp;Ls · add-backs</span></li>
-        <li><span class="dot">2</span><h3>Confidential profile</h3><p>An offering memorandum and a blind teaser that describes the business without naming it.</p><span class="docs">Teaser · offering memo</span></li>
-        <li><span class="dot">3</span><h3>Marketing and screening</h3><p>Buyers sign an NDA and show proof of funds before seeing any details.</p><span class="docs">NDA · proof of funds</span></li>
-        <li><span class="dot">4</span><h3>Offers and LOI</h3><p>We compare price, terms, financing and transition, then sign a letter of intent.</p><span class="docs">Letter of intent</span></li>
-        <li><span class="dot">5</span><h3>Diligence and financing</h3><p>The buyer verifies books, lease and operations while their lender underwrites.</p><span class="docs">Diligence list · lender package</span></li>
-        <li><span class="dot">6</span><h3>Closing</h3><p>Purchase agreement, lease assignment and escrow. Ownership transfers.</p><span class="docs">APA · escrow · bill of sale</span></li>
+        <li><span class="dot">1</span><h3>Valuation</h3><p>We review three years of financials, recast them to show true owner earnings, and set a price range the market will support.</p><span class="docs">Tax returns · P&amp;Ls · add-backs</span></li>
+        <li><span class="dot">2</span><h3>Confidential profile</h3><p>I write the offering memorandum and a blind teaser that describes the business without naming it.</p><span class="docs">Teaser · offering memorandum</span></li>
+        <li><span class="dot">3</span><h3>Marketing and screening</h3><p>The teaser goes to buyer networks and listing platforms. Buyers sign an NDA and show proof of funds before seeing details.</p><span class="docs">NDA · buyer profile · proof of funds</span></li>
+        <li><span class="dot">4</span><h3>Offers and LOI</h3><p>We compare offers on price, terms, financing and transition, then sign a letter of intent with the strongest buyer.</p><span class="docs">Letter of intent</span></li>
+        <li><span class="dot">5</span><h3>Due diligence and financing</h3><p>The buyer verifies the books, lease and operations while their lender underwrites the loan.</p><span class="docs">Diligence list · lender package</span></li>
+        <li><span class="dot">6</span><h3>Closing</h3><p>Purchase agreement, lease assignment, and escrow. Funds are released and ownership transfers.</p><span class="docs">APA · escrow · bill of sale</span></li>
       </ol>
     </div>
   </section>
@@ -340,20 +337,20 @@ footer b{color:#fff}
     <div class="wrap">
       <div class="head">
         <div class="eyebrow">Commercial loans</div>
-        <h2 id="loans-h">The right loan for what you're buying</h2>
-        <p class="lede">Structure depends on the asset and your down payment. We start with a short pre-qualification conversation.</p>
+        <h2 id="loans-h">Loan programs I arrange</h2>
+        <p class="lede">The right structure depends on what you're buying and how much you're putting down. We start with a short pre-qualification conversation.</p>
       </div>
       <div class="loans">
         <div class="ph"><svg class="fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg><img src="https://images.unsplash.com/photo-1551135049-8a33b5883817?auto=format&fit=crop&w=900&q=70" alt="Four people reviewing papers at a table" loading="lazy" onerror="this.remove()"></div>
         <div>
           <div class="lgrid">
-            <div class="loan"><b>SBA 7(a)</b><div><span>Buying a business, partner buyouts, working capital, equipment</span><em>Best when the price is mostly goodwill and cash flow</em></div></div>
-            <div class="loan"><b>SBA 504</b><div><span>Owner-occupied buildings and major equipment</span><em>Best when your business will occupy most of the property</em></div></div>
-            <div class="loan"><b>Conventional</b><div><span>Investment property and owner-user purchases</span><em>Best with strong property income or borrower financials</em></div></div>
-            <div class="loan"><b>Bridge</b><div><span>Short-term financing before a refinance or sale</span><em>Best when you need to close fast or reposition</em></div></div>
-            <div class="loan"><b>Construction</b><div><span>Ground-up builds and major renovations</span><em>Best when plans, budget and permits are in place</em></div></div>
+            <div class="loan"><b>SBA 7(a)</b><div><span>Buying a business, partner buyouts, working capital, equipment</span><em>Good fit when the purchase is mostly goodwill and cash flow, not hard assets</em></div></div>
+            <div class="loan"><b>SBA 504</b><div><span>Owner-occupied buildings, major equipment</span><em>Good fit when your business will occupy most of the property</em></div></div>
+            <div class="loan"><b>Conventional</b><div><span>Investment property and owner-user purchases</span><em>Good fit with strong property income or borrower financials</em></div></div>
+            <div class="loan"><b>Bridge</b><div><span>Short-term financing before a refinance or sale</span><em>Good fit when you need to close fast or reposition a property</em></div></div>
+            <div class="loan"><b>Construction</b><div><span>Ground-up builds and major renovations</span><em>Good fit when plans, budget and permits are in place</em></div></div>
           </div>
-          <p class="note">Loans are arranged through BRG Realty Corp and made by third-party lenders. Rates, terms and approval are set by the lender. Nothing here is a commitment to lend.</p>
+          <p class="note">Loans are arranged through BRG Realty Corp and made by third-party lenders. Rates, terms and approval are set by the lender and depend on the borrower and property. Nothing on this page is a commitment to lend.</p>
         </div>
       </div>
     </div>
@@ -369,10 +366,10 @@ footer b{color:#fff}
       </div>
       <div class="rgrid">
         <div class="perks">
-          <div class="perk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF5A" stroke-width="1.7" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><b>A licensed California brokerage</b><span>When a deal includes California real property, the license and supervision are already in place through BRG Realty Corp.</span></div>
+          <div class="perk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF5A" stroke-width="1.7" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><b>A licensed California brokerage behind you</b><span>When a deal includes California real property, the license and broker supervision are already in place through BRG Realty Corp.</span></div>
           <div class="perk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF5A" stroke-width="1.7" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="1"/><path d="M3 10h18M7 15h4"/></svg><b>Financing in-house</b><span>Buyer pre-qualification and SBA packaging help your listings close instead of stalling at the lender.</span></div>
-          <div class="perk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF5A" stroke-width="1.7" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg><b>Marketing done for you</b><span>Teasers, offering memos, listing copy and buyer outreach built by an agency-level team.</span></div>
-          <div class="perk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF5A" stroke-width="1.7" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c.6-3.4 3-5.2 6-5.2s5.4 1.8 6 5.2M15 14.6c2.6.1 4.6 1.8 5 5.4"/></svg><b>Deal support and co-brokering</b><span>Help with valuations, LOIs and diligence, plus a team to split work with.</span></div>
+          <div class="perk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF5A" stroke-width="1.7" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg><b>Marketing done for you</b><span>Teasers, offering memorandums, listing copy and buyer outreach built by an agency-level marketing team.</span></div>
+          <div class="perk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF5A" stroke-width="1.7" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c.6-3.4 3-5.2 6-5.2s5.4 1.8 6 5.2M15 14.6c2.6.1 4.6 1.8 5 5.4"/></svg><b>Deal support and a team to split work with</b><span>Help with valuations, LOIs and diligence checklists, plus co-brokering across the team.</span></div>
         </div>
         <div class="fit">
           <h3>Is this a fit?</h3>
@@ -410,11 +407,12 @@ footer b{color:#fff}
         <div class="eyebrow">About</div>
         <h2 id="about-h" style="margin-top:12px">Val Fulton</h2>
         <p class="lede" style="margin-top:16px">I'm a licensed California real estate professional with BRG Realty Corp and the founder of Atlantic &amp; Vine, a marketing, advertising and PR consultancy.</p>
-        <p style="margin-top:14px;color:var(--ink-2)">A business for sale needs what a brand launch needs: a clear story, the right audience and careful timing. I bring that to every listing, and I stay with sellers and buyers from valuation through closing.</p>
+        <p style="margin-top:14px;color:var(--ink-2)">That combination shapes how I work. A business for sale needs the same things a brand launch does: a clear story, the right audience and careful timing. I bring that to every listing, and I stay with sellers and buyers from valuation through closing.</p>
         <div class="facts">
           <div><span class="k">License</span><span>California DRE #01281191</span></div>
           <div><span class="k">Brokerage</span><span>BRG Realty Corp, 1900 Camden Ave, San Jose, CA 95124</span></div>
           <div><span class="k">Focus</span><span>Business sales, commercial property, commercial lending</span></div>
+          <div><span class="k">Team</span><span>Business brokers in select states</span></div>
         </div>
       </div>
     </div>
@@ -480,17 +478,6 @@ footer b{color:#fff}
   var hdr=document.getElementById('hdr');
   function onScroll(){ if(window.scrollY>40) hdr.classList.add('solid'); else hdr.classList.remove('solid'); }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
-
-  var words=[].slice.call(document.querySelectorAll('.rot span')), wi=0;
-  if(!reduce && words.length>1){
-    setInterval(function(){
-      var cur=words[wi]; cur.classList.remove('on'); cur.classList.add('out');
-      wi=(wi+1)%words.length; var nx=words[wi];
-      nx.classList.remove('out'); nx.style.transition='none'; nx.style.transform='translateY(110%)';
-      void nx.offsetWidth; nx.style.transition=''; nx.style.transform=''; nx.classList.add('on');
-      setTimeout(function(){cur.classList.remove('out')},800);
-    },2800);
-  }
 
   var steps=document.getElementById('steps');
   if('IntersectionObserver' in window && !reduce){
