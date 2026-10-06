@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Val Fulton Business Brokerage</title>
-<meta name="description" content="Val Fulton, BRG Realty Corp (CA DRE #01281191): confidential business sales, commercial real estate and commercial loans in California.">
+<title>BRG Business &amp; Commercial</title>
+<meta name="description" content="BRG Realty Corp (Corporate DRE #02075330): confidential business sales, commercial real estate and commercial loans across California.">
 <link rel="canonical" href="https://smartwealthca.com/">
-<meta property="og:title" content="Val Fulton Business Brokerage">
+<meta property="og:title" content="BRG Business &amp; Commercial">
 <meta property="og:description" content="Sell the business. Buy the next one. Finance the building. Business brokerage, commercial real estate and commercial loans in California.">
 <meta property="og:url" content="https://smartwealthca.com/">
 <meta property="og:type" content="website">
@@ -50,7 +50,7 @@ a{color:inherit}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
 .top.solid{background:rgba(11,22,40,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.mark{width:38px;height:38px;border-radius:10px;background:var(--gold);display:grid;place-items:center;color:var(--navy);font:800 16px var(--display)}
+.mark{min-width:46px;height:40px;padding-inline:8px;border-radius:10px;background:var(--gold);display:grid;place-items:center;color:var(--navy);font:800 16px var(--display);letter-spacing:.02em}
 .brand b{display:block;font:700 19px/1.1 var(--display)}
 .brand small{display:block;font:500 11px/1.3 var(--mono);letter-spacing:.08em;color:var(--on-dark-2);text-transform:uppercase}
 nav{display:flex;gap:4px 24px;flex-wrap:wrap;font-size:15px}
@@ -162,7 +162,23 @@ section{padding-block:96px}
 .ads .ad{aspect-ratio:6/5;max-width:100%}
 .ads .ad .who{font-size:14.5px;color:var(--ink-2);max-width:24ch}
 
-.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:center}
+.team{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.person{background:var(--paper);border-radius:18px;padding:26px 22px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);transition:transform .25s ease, box-shadow .25s ease}
+.person:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(16,24,38,.5)}
+.person .av{position:relative;overflow:hidden;width:84px;height:84px;border-radius:50%;background:linear-gradient(150deg,var(--navy-3),var(--navy));color:var(--gold);display:grid;place-items:center;font:800 24px var(--display);margin-bottom:10px;box-shadow:0 0 0 3px #fff, 0 0 0 4px var(--gold)}
+.person .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.person .cl{font-size:13.5px;color:var(--action);text-decoration:none;font-weight:600}
+.person .cl:first-of-type{margin-top:6px}
+.person .cl:hover{text-decoration:underline}
+.person b{font:700 19px var(--display)}
+.person .role{font:12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+.person .note2{font-size:14.5px;color:var(--ink-2)}
+.person.join{background:transparent;border:1.5px dashed #C9AE6E}
+.person.join .av{background:var(--gold);color:var(--navy)}
+.person.join .note2{color:var(--action);font-weight:600}
+@media (max-width:1100px){.team{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.team{grid-template-columns:minmax(0,1fr)}}
 .portrait{position:relative;aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--navy-3),var(--navy));display:grid;place-items:center;overflow:hidden;max-width:100%}
 .portrait .mono{font:800 120px/1 var(--display);color:var(--gold);letter-spacing:-.04em}
 .portrait .ring{position:absolute;inset:18px;border:1px solid rgba(212,175,90,.35);border-radius:16px}
@@ -191,9 +207,17 @@ textarea{min-height:110px;resize:vertical}
 footer{background:#070E1A;color:var(--on-dark-2);font-size:13.5px;padding-block:40px 48px}
 footer .wrap{display:grid;gap:10px}
 footer b{color:#fff}
+.fgrid{display:grid;grid-template-columns:1.3fr repeat(4,minmax(0,1fr));gap:28px;padding-bottom:28px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,.12)}
+.fgrid div{display:flex;flex-direction:column;gap:8px}
+.fgrid .fh{font:700 15px var(--display);color:var(--gold);margin-bottom:4px}
+.fgrid a{color:var(--on-dark-2);text-decoration:none}
+.fgrid a:hover{color:#fff}
+footer .fine a{color:var(--on-dark-2)}
+@media (max-width:900px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.fgrid{grid-template-columns:minmax(0,1fr)}}
 
 @media (max-width:900px){
-  .hero .wrap,.loans,.rgrid,.about,.contact{grid-template-columns:minmax(0,1fr)}
+  .hero .wrap,.loans,.rgrid,.contact{grid-template-columns:minmax(0,1fr)}
   .hero .wrap{padding-bottom:130px}
   .services,.ads{grid-template-columns:minmax(0,1fr)}
   .ads .ad{aspect-ratio:auto;min-height:200px}
@@ -218,13 +242,14 @@ footer b{color:#fff}
 
 <header class="top" id="hdr">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="mark">VF</span><span><b>Val Fulton</b><small>BRG Realty Corp · CA DRE #01281191</small></span></a>
+    <a class="brand" href="#top"><span class="mark">BRG</span><span><b>BRG Realty Corp</b><small>Business · Commercial · Lending</small></span></a>
     <nav aria-label="Sections">
       <a href="#services">Services</a>
       <a href="#process">Selling</a>
       <a href="#loans">Loans</a>
       <a href="#join">Join the team</a>
       <a href="#contact">Contact</a>
+      <a href="https://www.brgrealtycorp.com/" target="_blank" rel="noopener">BRGRealtyCorp.com ↗</a>
     </nav>
   </div>
 </header>
@@ -234,14 +259,14 @@ footer b{color:#fff}
     <canvas id="sky" aria-hidden="true"></canvas>
     <div class="wrap">
       <div class="copy">
-        <div class="eyebrow">California business brokerage · Commercial real estate · Commercial loans</div>
+        <div class="eyebrow">BRG Realty Corp · Business brokerage · Commercial real estate · Commercial loans</div>
         <h1><span class="ln">Sell the business.</span> <span class="ln">Buy the next one.</span> <em class="ln">Finance the building.</em></h1>
-        <p class="lede">One advisor for the whole deal. I help owners sell their businesses confidentially, help buyers find and finance the right one, and handle the commercial property and loan that often come with it.</p>
+        <p class="lede">One team for the whole deal. We help owners sell their businesses confidentially, help buyers find and finance the right one, and handle the commercial property and loan that often come with it.</p>
         <div class="ctas">
           <a class="btn primary" href="#contact">Request a confidential valuation <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          <a class="btn line" href="#join">Brokers: join my team</a>
+          <a class="btn line" href="#join">Brokers: join our team</a>
         </div>
-        <div class="creds"><span><i></i>Val Fulton, CA DRE #01281191</span><span><i></i>BRG Realty Corp · San Jose</span></div>
+        <div class="creds"><span><i></i>BRG Realty Corp · Corporate DRE #02075330</span><span><i></i>Headquartered in San Jose · 20+ offices</span></div>
       </div>
 
       <div class="doc" aria-label="Example of a confidential business profile with identifying details blacked out">
@@ -272,9 +297,9 @@ footer b{color:#fff}
   <section id="services" aria-labelledby="svc-h">
     <div class="wrap">
       <div class="head">
-        <div class="eyebrow">What I do</div>
+        <div class="eyebrow">What we do</div>
         <h2 id="svc-h">Three services, one transaction</h2>
-        <p class="lede">A business sale often includes a building to buy or a lease to assign, and a buyer who needs a loan. Keeping all three with one advisor keeps the deal moving.</p>
+        <p class="lede">A business sale often includes a building to buy or a lease to assign, and a buyer who needs a loan. Keeping all three with one team keeps the deal moving.</p>
       </div>
       <div class="services">
         <article class="card" id="sell">
@@ -320,11 +345,11 @@ footer b{color:#fff}
       <div class="head">
         <div class="eyebrow">Selling a business</div>
         <h2 id="proc-h">How a confidential sale works</h2>
-        <p class="lede">Every sale follows the same six stages. You'll know what's happening at each one and what I need from you.</p>
+        <p class="lede">Every sale follows the same six stages. You'll know what's happening at each one and what we need from you.</p>
       </div>
       <ol class="steps" id="steps">
         <li><span class="dot">1</span><h3>Valuation</h3><p>We review three years of financials, recast them to show true owner earnings, and set a price range the market will support.</p><span class="docs">Tax returns · P&amp;Ls · add-backs</span></li>
-        <li><span class="dot">2</span><h3>Confidential profile</h3><p>I write the offering memorandum and a blind teaser that describes the business without naming it.</p><span class="docs">Teaser · offering memorandum</span></li>
+        <li><span class="dot">2</span><h3>Confidential profile</h3><p>We write the offering memorandum and a blind teaser that describes the business without naming it.</p><span class="docs">Teaser · offering memorandum</span></li>
         <li><span class="dot">3</span><h3>Marketing and screening</h3><p>The teaser goes to buyer networks and listing platforms. Buyers sign an NDA and show proof of funds before seeing details.</p><span class="docs">NDA · buyer profile · proof of funds</span></li>
         <li><span class="dot">4</span><h3>Offers and LOI</h3><p>We compare offers on price, terms, financing and transition, then sign a letter of intent with the strongest buyer.</p><span class="docs">Letter of intent</span></li>
         <li><span class="dot">5</span><h3>Due diligence and financing</h3><p>The buyer verifies the books, lease and operations while their lender underwrites the loan.</p><span class="docs">Diligence list · lender package</span></li>
@@ -337,7 +362,7 @@ footer b{color:#fff}
     <div class="wrap">
       <div class="head">
         <div class="eyebrow">Commercial loans</div>
-        <h2 id="loans-h">Loan programs I arrange</h2>
+        <h2 id="loans-h">Loan programs we arrange</h2>
         <p class="lede">The right structure depends on what you're buying and how much you're putting down. We start with a short pre-qualification conversation.</p>
       </div>
       <div class="loans">
@@ -361,8 +386,8 @@ footer b{color:#fff}
     <div class="wrap">
       <div class="head">
         <div class="eyebrow" style="color:var(--gold)">For business brokers</div>
-        <h2 id="join-h">Join my business brokerage team</h2>
-        <p class="lede" style="color:var(--on-dark-2)">I'm building a team of business brokers across the country, backed by a California brokerage, a loan desk and a marketer who treats every listing like a launch.</p>
+        <h2 id="join-h">Join the BRG business brokerage team</h2>
+        <p class="lede" style="color:var(--on-dark-2)">BRG is building a team of business brokers across the country, backed by a California brokerage, a loan desk and a marketing team that treats every listing like a launch.</p>
       </div>
       <div class="rgrid">
         <div class="perks">
@@ -390,7 +415,7 @@ footer b{color:#fff}
       <div class="head">
         <div class="eyebrow">Featured partners</div>
         <h2 id="partners-h">Trusted partners for your deal</h2>
-        <p class="lede">Lenders, escrow officers, CPAs and attorneys my clients rely on. Partner spots are open.</p>
+        <p class="lede">Lenders, escrow officers, CPAs and attorneys our clients rely on. Partner spots are open.</p>
       </div>
       <div class="ads">
         <aside class="ad" aria-label="Advertising space for a lender"><span class="lbl">Advertisement</span><b>Lender spotlight</b><span class="who">SBA and commercial lenders</span><span class="size">300 × 250</span><a href="#contact" data-interest="Advertising on this site">Reserve this spot →</a></aside>
@@ -401,19 +426,25 @@ footer b{color:#fff}
   </section>
 
   <section id="about" class="white" aria-labelledby="about-h">
-    <div class="wrap about">
-      <div class="portrait" role="img" aria-label="Portrait placeholder for Val Fulton"><span class="ring"></span><span class="mono">VF</span><small>Headshot coming soon</small></div>
-      <div>
-        <div class="eyebrow">About</div>
-        <h2 id="about-h" style="margin-top:12px">Val Fulton</h2>
-        <p class="lede" style="margin-top:16px">I'm a licensed California real estate professional with BRG Realty Corp and the founder of Atlantic &amp; Vine, a marketing, advertising and PR consultancy.</p>
-        <p style="margin-top:14px;color:var(--ink-2)">That combination shapes how I work. A business for sale needs the same things a brand launch does: a clear story, the right audience and careful timing. I bring that to every listing, and I stay with sellers and buyers from valuation through closing.</p>
-        <div class="facts">
-          <div><span class="k">License</span><span>California DRE #01281191</span></div>
-          <div><span class="k">Brokerage</span><span>BRG Realty Corp, 1900 Camden Ave, San Jose, CA 95124</span></div>
-          <div><span class="k">Focus</span><span>Business sales, commercial property, commercial lending</span></div>
-          <div><span class="k">Team</span><span>Business brokers in select states</span></div>
-        </div>
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">About BRG</div>
+        <h2 id="about-h">A California brokerage, and a team behind every deal</h2>
+        <p class="lede">BRG Realty Corp is headquartered at 1900 Camden Ave in San Jose and led by Gregg Bunker, who has more than thirty years in Silicon Valley real estate. Our business and commercial team brings brokerage, property and lending together so clients work with one group from first conversation to closing.</p>
+      </div>
+      <div class="team">
+        <div class="person"><span class="av">GB<img src="https://irp.cdn-website.com/78454bbe/dms3rep/multi/opt/gregg+headshot+2017-640w.jpg" alt="Gregg Bunker" loading="lazy" onerror="this.remove()"></span><b>Gregg Bunker</b><span class="role">President</span><span class="note2">Founder of BRG Realty Corp</span><a class="cl" href="tel:+14087811725">408-781-1725</a><a class="cl" href="mailto:gregg@brgrealtycorp.com">gregg<wbr>@brgrealtycorp.com</a></div>
+        <div class="person"><span class="av">CB<img src="https://irp.cdn-website.com/78454bbe/dms3rep/multi/opt/Cameron+Bunker-2be9692a-252w.png" alt="Cameron Bunker" loading="lazy" onerror="this.remove()"></span><b>Cameron Bunker</b><span class="role">Agent Recruitment</span><span class="note2">Bringing new agents and brokers onto the team</span><a class="cl" href="tel:+14087810969">408-781-0969</a><a class="cl" href="mailto:cameron@brgrealtycorp.com">cameron<wbr>@brgrealtycorp.com</a></div>
+        <div class="person"><span class="av">BB<img src="https://irp.cdn-website.com/78454bbe/dms3rep/multi/opt/Bradley+Bunker-256w.png" alt="Brad Bunker" loading="lazy" onerror="this.remove()"></span><b>Brad Bunker</b><span class="role">Operations Manager</span><span class="note2">Operations and transaction support</span><a class="cl" href="mailto:brad@brgrealtycorp.com">brad<wbr>@brgrealtycorp.com</a></div>
+        <div class="person"><span class="av">VF</span><b>Val Fulton</b><span class="role">Business &amp; Commercial Team</span><span class="note2">CA DRE #01281191 · founder of Atlantic &amp; Vine marketing</span><a class="cl" href="tel:+15302825228">530-282-5228</a><a class="cl" href="mailto:val@atlanticandvine.com">val<wbr>@atlanticandvine.com</a></div>
+        <a class="person join" href="https://www.brgrealtycorp.com/join-our-team" target="_blank" rel="noopener"><span class="av">+</span><b>Your seat at the table</b><span class="role">Business brokers</span><span class="note2">Join the team →</span></a>
+      </div>
+      <div class="facts">
+        <div><span class="k">Brokerage</span><span>BRG Realty Corp · Corporate DRE #02075330</span></div>
+        <div><span class="k">Headquarters</span><span>1900 Camden Ave, San Jose, CA 95124</span></div>
+        <div><span class="k">Offices</span><span>San Jose (HQ), Palo Alto, Cupertino, Los Gatos, San Mateo, San Francisco, Oakland, Berkeley, Walnut Creek, Marin, Santa Cruz, Sacramento, Los Angeles, Santa Monica, Irvine, Newport Beach, San Clemente, San Diego · plus Miami Beach, Honolulu and Cincinnati · <a href="https://www.brgrealtycorp.com/locations" target="_blank" rel="noopener">All locations →</a></span></div>
+        <div><span class="k">Main office</span><span>408-558-3636</span></div>
+        <div><span class="k">Focus</span><span>Business sales, commercial property, commercial lending</span></div>
       </div>
     </div>
   </section>
@@ -423,9 +454,9 @@ footer b{color:#fff}
       <div>
         <div class="eyebrow">Contact</div>
         <h2 id="contact-h" style="color:#fff;margin-top:12px">Start with a confidential conversation</h2>
-        <p class="lede" style="margin-top:16px">Tell me a little about what you're selling, buying or financing. Everything you share stays between us.</p>
+        <p class="lede" style="margin-top:16px">Tell us a little about what you're selling, buying or financing. Everything you share stays between us.</p>
         <div class="lines">
-          <div class="line"><div><span class="k">Phone / text</span><span class="v">530-282-5228</span></div><button class="copybtn" type="button" data-copy="530-282-5228">Copy</button></div>
+          <div class="line"><div><span class="k">Phone / text · Val Fulton, business &amp; commercial team</span><span class="v">530-282-5228</span></div><button class="copybtn" type="button" data-copy="530-282-5228">Copy</button></div>
           <div class="line"><div><span class="k">Email</span><span class="v">val@atlanticandvine.com</span></div><button class="copybtn" type="button" data-copy="val@atlanticandvine.com">Copy</button></div>
         </div>
       </div>
@@ -449,8 +480,8 @@ footer b{color:#fff}
           </select>
         </label>
         <label for="f-msg">Details<textarea id="f-msg" name="message" placeholder="Industry, location, rough revenue or price range, timing"></textarea></label>
-        <div><button class="btn primary" type="submit" id="sendBtn">Send to Val</button></div>
-        <div class="ready" id="sent" hidden><b>Thanks, your message was sent.</b><span>Val will reply within one business day. For anything urgent, call or text 530-282-5228.</span></div>
+        <div><button class="btn primary" type="submit" id="sendBtn">Send to our team</button></div>
+        <div class="ready" id="sent" hidden><b>Thanks, your message was sent.</b><span>Our team will reply within one business day. For anything urgent, call or text 530-282-5228.</span></div>
         <div class="ready" id="ready" hidden>
           <b>We couldn't send your message from this page.</b>
           <span>Copy it and send it to val@atlanticandvine.com, or text 530-282-5228.</span>
@@ -465,9 +496,16 @@ footer b{color:#fff}
 
 <footer>
   <div class="wrap">
-    <div><b>Val Fulton</b> · California DRE #01281191 · Real estate and business brokerage services through <b>BRG Realty Corp</b>, 1900 Camden Ave, San Jose, CA 95124 · Corporate DRE #02075330</div>
-    <div>Commercial loans are arranged through BRG Realty Corp and made by third-party lenders; all loans are subject to lender approval. Information on this site is general and is not legal, tax or investment advice.</div>
-    <div>Equal Housing Opportunity · Photos: Unsplash</div>
+    <div class="fgrid">
+      <div><b class="fh">BRG Realty Corp</b><span>1900 Camden Ave, San Jose, CA 95124</span><span>Main office: 408-558-3636</span><span>Corporate DRE #02075330</span></div>
+      <div><b class="fh">Company</b><a href="https://www.brgrealtycorp.com/" target="_blank" rel="noopener">Home</a><a href="https://www.brgrealtycorp.com/about" target="_blank" rel="noopener">About Us</a><a href="https://www.brgrealtycorp.com/locations" target="_blank" rel="noopener">Locations</a><a href="https://www.brgrealtycorp.com/blog" target="_blank" rel="noopener">BRG News</a><a href="https://www.brgrealtycorp.com/investor-relations" target="_blank" rel="noopener">Investor Relations</a><a href="https://www.brgrealtycorp.com/contact-us" target="_blank" rel="noopener">Contact</a></div>
+      <div><b class="fh">Real estate</b><a href="https://www.brgrealtycorp.com/search" target="_blank" rel="noopener">Properties</a><a href="https://www.brgrealtycorp.com/commercial-real-estate" target="_blank" rel="noopener">Commercial Real Estate</a><a href="https://www.brgrealtycorp.com/residential" target="_blank" rel="noopener">Residential Real Estate</a><a href="https://www.brgrealtycorp.com/development" target="_blank" rel="noopener">Development</a><a href="https://www.brgrealtycorp.com/business-advisors" target="_blank" rel="noopener">Business Advisors</a><a href="https://www.brgrealtycorp.com/find-a-real-estate-agent" target="_blank" rel="noopener">Find a Real Estate Agent</a></div>
+      <div><b class="fh">For agents</b><a href="https://www.brgrealtycorp.com/join-our-team" target="_blank" rel="noopener">Join Our Team</a><a href="https://www.brgrealtycorp.com/agent-training-center" target="_blank" rel="noopener">Agent Training Center</a><a href="https://www.brgrealtycorp.com/for-brg-agents" target="_blank" rel="noopener">For BRG Agents</a><a href="https://www.brgrealtycorp.com/video-resources" target="_blank" rel="noopener">Video Resources</a><a href="https://www.brgrealtycorp.com/resources" target="_blank" rel="noopener">Resources</a></div>
+      <div><b class="fh">Follow BRG</b><a href="https://www.facebook.com/BRGRealtySiliconValley" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/brg-realty-corporation" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/brgrealtycorp" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/brgrealtycorp" target="_blank" rel="noopener">X (Twitter)</a></div>
+    </div>
+    <div class="fine"><b>BRG Realty Corp</b> · Corporate DRE #02075330 · Business &amp; commercial team contact: Val Fulton, California DRE #01281191</div>
+    <div class="fine">Commercial loans are arranged through BRG Realty Corp and made by third-party lenders; all loans are subject to lender approval. Information on this site is general and is not legal, tax or investment advice.</div>
+    <div class="fine">Equal Housing Opportunity · Photos: Unsplash and BRG Realty Corp · <a href="https://www.brgrealtycorp.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> · <a href="https://www.brgrealtycorp.com/terms-and-conditions" target="_blank" rel="noopener">Terms &amp; Conditions</a></div>
   </div>
 </footer>
 
@@ -540,16 +578,16 @@ footer b{color:#fff}
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var el=f.elements, n=el['name'].value.trim(), em=el['email'].value.trim();
-    if(!n||!em||em.indexOf('@')<1){err.textContent='Add your name and a valid email so Val can reply.';err.hidden=false;return}
+    if(!n||!em||em.indexOf('@')<1){err.textContent='Add your name and a valid email so we can reply.';err.hidden=false;return}
     err.hidden=true;
     var ph=el['phone'].value.trim(), it=el['interest'].value, msg=el['message'].value.trim();
     var body='Name: '+n+'\nEmail: '+em+(ph?'\nPhone: '+ph:'')+'\nInterested in: '+it+(msg?'\n\n'+msg:'');
     var btn=document.getElementById('sendBtn'), sent=document.getElementById('sent');
-    function fallback(){out.textContent=body;document.getElementById('mailto').href='mailto:val@atlanticandvine.com?subject='+encodeURIComponent('Inquiry: '+it)+'&body='+encodeURIComponent(body);ready.hidden=false;btn.disabled=false;btn.textContent='Send to Val'}
+    function fallback(){out.textContent=body;document.getElementById('mailto').href='mailto:val@atlanticandvine.com?subject='+encodeURIComponent('Inquiry: '+it)+'&body='+encodeURIComponent(body);ready.hidden=false;btn.disabled=false;btn.textContent='Send to our team'}
     btn.disabled=true;btn.textContent='Sending…';ready.hidden=true;sent.hidden=true;
     try{
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-        .then(function(r){if(!r.ok)throw 0;sent.hidden=false;f.reset();btn.disabled=false;btn.textContent='Send to Val'})
+        .then(function(r){if(!r.ok)throw 0;sent.hidden=false;f.reset();btn.disabled=false;btn.textContent='Send to our team'})
         .catch(fallback);
     }catch(x){fallback()}
   });
