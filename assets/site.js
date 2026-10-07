@@ -105,7 +105,7 @@
     try{navigator.clipboard.writeText(t).then(done,function(){btn.textContent='Select and copy'})}catch(e){btn.textContent='Select and copy'}
   }
   $$('[data-copy]').forEach(function(b){b.addEventListener('click',function(){copyText(b.getAttribute('data-copy'),b)})});
-  $$('[data-interest]').forEach(function(a){a.addEventListener('click',function(){var s=$('#f-int'); if(s) s.value=a.getAttribute('data-interest')})});
+  $$('[data-interest]').forEach(function(a){a.addEventListener('click',function(){var v=a.getAttribute('data-interest'),h=(a.getAttribute('href')||'').split('#')[1],t=h&&document.getElementById(h),s=(t&&t.querySelector('select[name=interest]'))||$('#f-int'); if(s){[].forEach.call(s.options,function(o){if(o.text===v)s.value=o.value})} })});
 
   /* Netlify forms: send in place, fall back to a copyable message */
   $$('form[data-netlify]').forEach(function(f){
