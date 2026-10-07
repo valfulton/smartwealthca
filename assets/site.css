@@ -382,3 +382,15 @@ a.tile:hover,.tile.hov:hover{transform:translateY(-6px);box-shadow:0 1px 0 var(-
 .chips span:hover{background:var(--gold-soft);border-color:#C9AE6E}
 .cd i{font-style:normal}
 form{min-width:0;max-width:100%}form label,form input,form select,form textarea{min-width:0;max-width:100%}form select{width:100%}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 28px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.share.bottom{margin:36px 0 0;padding:22px 0 0;border-bottom:0;border-top:1px solid var(--rule)}
+.share .sl{font:12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:4px;width:100%}
+@media (min-width:640px){.share .sl{width:auto}}
+.article .share a.sh,.share .sh{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--rule);background:#fff;color:var(--ink);font:600 14px var(--sans);text-decoration:none;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease}
+.share .sh:hover{transform:translateY(-2px)}
+.share .li:hover{background:#0A66C2;color:#fff;border-color:#0A66C2}
+.share .fb:hover{background:#1877F2;color:#fff;border-color:#1877F2}
+.share .x:hover{background:#111;color:#fff;border-color:#111}
+.share .em:hover,.share .sms:hover,.share .cp:hover,.share .native:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.share .native{background:var(--action);color:#fff;border-color:var(--action)}
+@media (max-width:980px){.top.open nav{background:#0B1628!important;box-shadow:0 30px 40px -10px rgba(0,0,0,.6);max-height:calc(100vh - 70px);overflow:auto}.top.open nav a{opacity:1!important;transform:none!important}}

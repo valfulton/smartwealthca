@@ -128,3 +128,4 @@
     });
   });
 })();
+(function(){ if(!navigator.share) return; document.querySelectorAll('[data-share-url]').forEach(function(b){ b.hidden=false; b.addEventListener('click',function(){ navigator.share({title:b.getAttribute('data-share-title'),url:b.getAttribute('data-share-url')}).catch(function(){}); }); }); })();
