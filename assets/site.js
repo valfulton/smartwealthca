@@ -129,3 +129,23 @@
   });
 })();
 (function(){ if(!navigator.share) return; document.querySelectorAll('[data-share-url]').forEach(function(b){ b.hidden=false; b.addEventListener('click',function(){ navigator.share({title:b.getAttribute('data-share-title'),url:b.getAttribute('data-share-url')}).catch(function(){}); }); }); })();
+/* lightbox */
+(function(){
+  var items=[].slice.call(document.querySelectorAll('[data-lb]')); if(!items.length) return;
+  var box,img,cap,idx=0,x0=null;
+  function show(i){ idx=(i+items.length)%items.length; var a=items[idx]; img.style.opacity=0; img.onload=function(){img.style.opacity=1}; img.src=a.getAttribute('href'); img.alt=(a.querySelector('img')||{}).alt||''; cap.textContent=(a.getAttribute('data-cap')||'')+'  ·  '+(idx+1)+' / '+items.length; }
+  function close(){ box.classList.remove('on'); setTimeout(function(){box.remove();box=null},250); document.removeEventListener('keydown',key); document.body.style.overflow=''; }
+  function key(e){ if(e.key==='Escape')close(); if(e.key==='ArrowRight')show(idx+1); if(e.key==='ArrowLeft')show(idx-1); }
+  function open(i){
+    box=document.createElement('div'); box.className='lb'; box.setAttribute('role','dialog'); box.setAttribute('aria-modal','true'); box.setAttribute('aria-label','Photo viewer');
+    box.innerHTML='<img alt=""><button class="x" type="button" aria-label="Close">×</button><button class="pv" type="button" aria-label="Previous photo">‹</button><button class="nx" type="button" aria-label="Next photo">›</button><div class="cap"></div>';
+    document.body.appendChild(box); img=box.querySelector('img'); cap=box.querySelector('.cap');
+    box.querySelector('.x').onclick=close; box.querySelector('.pv').onclick=function(e){e.stopPropagation();show(idx-1)}; box.querySelector('.nx').onclick=function(e){e.stopPropagation();show(idx+1)};
+    box.addEventListener('click',function(e){ if(e.target===box) close(); });
+    box.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+    box.addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) show(idx+(dx<0?1:-1)); x0=null; });
+    document.addEventListener('keydown',key); document.body.style.overflow='hidden'; show(i);
+    requestAnimationFrame(function(){box.classList.add('on')}); box.querySelector('.x').focus();
+  }
+  items.forEach(function(a,i){ a.addEventListener('click',function(e){ e.preventDefault(); open(i); }); });
+})();
