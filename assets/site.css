@@ -427,3 +427,14 @@ form{min-width:0;max-width:100%}form label,form input,form select,form textarea{
 @media (max-width:640px){.lb .pv,.lb .nx{top:auto;bottom:44px;margin:0}.ghero{padding-top:120px;min-height:440px}}
 @media (prefers-reduced-motion:reduce){.ghero .gbg{animation:none}}
 .ghero .eyebrow{color:var(--gold);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.thanks{background:linear-gradient(90deg,#D4AF5A,#E8CB86,#D4AF5A);background-size:200% 100%;animation:shine 8s linear infinite;color:#2B2108}
+.thanks .wrap{display:flex;align-items:center;gap:16px;padding-block:18px;flex-wrap:wrap}
+.thanks .ty{font:600 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;background:#0B1628;color:#E8CB86;padding:6px 12px;border-radius:999px}
+.thanks p{margin:0;font-size:17px}
+@keyframes shine{to{background-position:-200% 0}}
+.article figure{margin:28px 0}
+.article figure img{width:100%;height:auto;border-radius:14px;display:block}
+.article figure figcaption{font:13px var(--mono);color:var(--muted);margin-top:8px}
+.article .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.article .pair{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.thanks{animation:none}}
