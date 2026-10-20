@@ -438,3 +438,9 @@ form{min-width:0;max-width:100%}form label,form input,form select,form textarea{
 .article .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:560px){.article .pair{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.thanks{animation:none}}
+/* real BRG logo */
+.brand .logo{height:46px;width:auto;display:block}
+.brand .tag{border-left:1px solid rgba(255,255,255,.25);padding-left:12px}
+.brand .tag small{max-width:120px;line-height:1.35}
+.flogo{height:52px!important;width:133px!important;max-width:none;display:block;margin-bottom:12px}
+@media (max-width:640px){.brand .tag{display:none}.brand .logo{height:40px}}
